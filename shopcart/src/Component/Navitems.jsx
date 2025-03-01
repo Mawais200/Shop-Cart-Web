@@ -21,7 +21,7 @@ const Navitems = () => {
     return (
         <header className={`header-section style-4 ${fixedHeader ? "header-fixed fadeInup" : ""}`}>
             {/* Header Top */}
-            <div className={`flex md:hidden ${infoToggle ? "open" : ""}`}>
+            <div className={` justify-between ${infoToggle ?"flex":"hidden"  }`}>
                 <div className="container">
                     <div className="flex justify-between">
                         <a href="/signUp" className='lab-btn me-3'>
