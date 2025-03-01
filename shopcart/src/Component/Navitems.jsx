@@ -1,4 +1,5 @@
 import React from 'react'
+import logo from '../images/logo/logo.png'
 import { useState } from 'react';
 
 const Navitems = () => {
@@ -28,6 +29,27 @@ return (
             <a href="/signIn" className='lab-btn me-3'>
             <span className='bg-amber-300 text-[14px] rounded-[5px] font-medium hover:bg-blue-400 border-[1px] border-amber-300 hover:border-transparent p-[5px_10px]'>LogIn</span>
             </a>
+
+        </div>
+
+    </div>
+
+   </div>
+   {/* header-bottom */}
+   <div className='header-bottom'>
+    <div className='container'>
+        <div className='header-wrapper'>
+
+            {/* logo */}
+            <div className='logo-search'>
+                <div className='logo'>
+                  <a href=""> 
+                    <img src={logo} alt="" />
+                  </a>
+
+                </div>
+
+            </div>
 
         </div>
 
