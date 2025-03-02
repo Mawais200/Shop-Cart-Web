@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect,useRef } from 'react';
 import logo from '../images/logo/logo.png';Button
 import Button from './Button'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -10,6 +10,7 @@ const Navitems = () => {
     const [infoToggle, setInfoToggle] = useState(false);
     const [fixedHeader, setFixedHeader] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
+    const downref = useRef(null);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -18,6 +19,16 @@ const Navitems = () => {
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, [fixedHeader]);
+    useEffect(() =>{
+        const handleClickOutside = (event) => {
+        if(downref.current && !downref.current.contains(event.target)){
+            isOpen(false);
+        }};
+        document.addEventListener("mousedown",handleClickOutside);
+        return ()=>{
+            document.removeEventListener("mousedown", handleClickOutside);
+        }
+    }, []);
 
      const DropdownLinks = [
            {
@@ -70,23 +81,23 @@ const Navitems = () => {
                    
                     <div className="flex space-x-8">
                         
-                    <div className="relative"
-      onMouseOver={()=> setIsOpen(true)}
-      onMouseLeave={()=> setIsOpen(true)}
-    >
+                    <div className="relative" ref={downref}>
       {/* Navbar Link */}
-      <a href="/" className="nav-link flex items-center gap-1">
+      <button
+        onClick={() => setIsOpen((prev) => !prev)}
+        className="nav-link flex items-center gap-1"
+      >
         Home
         <span>
           <FaCaretDown
             className={`transition-all duration-200 ${isOpen ? "rotate-180" : ""}`}
           />
         </span>
-      </a>
+      </button>
 
       {/* Dropdown Menu */}
       {isOpen && (
-        <div className="absolute left-0 z-[9999] w-[200px] rounded-md bg-white p-2 mt-[10px] text-black shadow-md">
+        <div className="absolute left-0 z-[9999] w-[200px] rounded-md bg-white p-2 mt-[15px] text-black shadow-md">
           <ul>
             {DropdownLinks.map((data) => (
               <li key={data.id}>
