@@ -4,6 +4,7 @@ import Products from './Products/products'
 import TopProducts from './TopProducts/topproducts'
 import Banneres from './Banneres/banner'
 import Subscribe from './Subscribe/subscribe'
+import Testimonial from './Testimonial/Testimonials'
 
 import './App.css'
 
@@ -19,6 +20,7 @@ function App() {
       <TopProducts/>
       <Banneres/>
       <Subscribe/>
+      <Testimonial/>
 
       
     
