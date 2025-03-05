@@ -46,11 +46,11 @@ const TopProducts = ({ handleOrderPopup }) => {
       </div>
 
       {/* Products Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 place-items-center pt-[40px]">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 place-items-center pt-[40px] ">
         {ProductsData.map((product) => (
           <div
             key={product.id}
-            className="rounded-2xl bg-white dark:bg-gray-800 hover:bg-black/80 dark:hover:bg-primary hover:text-white relative shadow-xl duration-300 group max-w-[300px]"
+            className="rounded-2xl bg-white dark:bg-gray-800 hover:bg-black/80 dark:hover:bg-primary hover:text-white relative shadow-xl duration-300 group max-w-[300px] md:pt-0 pt-[40px]"
             data-aos="zoom-in"
           >
             {/* Image Section */}
@@ -58,7 +58,7 @@ const TopProducts = ({ handleOrderPopup }) => {
               <img
                 src={product.img}
                 alt={product.title}
-                className="max-w-[140px] block mx-auto transform -translate-y-16 group-hover:scale-105 duration-300 drop-shadow-md"
+                className="max-w-[140px] block mx-auto transform md:-translate-y-16 -translate-y-7 group-hover:scale-105 duration-300 drop-shadow-md "
               />
             </div>
 
