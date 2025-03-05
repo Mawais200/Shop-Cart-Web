@@ -30,7 +30,8 @@ const ProductsData = [
 
 const TopProducts = ({ handleOrderPopup }) => {
   return (
-    <div className="container popin">
+    <div className="flex justify-center">
+    <div className="container popin ">
       {/* Header Section */}
       <div className="text-left md:text-center mb-24">
         <p className="text-sm text-primary" data-aos="fade-up">
@@ -85,6 +86,7 @@ const TopProducts = ({ handleOrderPopup }) => {
           </div>
         ))}
       </div>
+    </div>
     </div>
   );
 };
