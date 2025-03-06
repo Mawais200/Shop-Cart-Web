@@ -9,6 +9,7 @@ import Banneres from './Banneres/banner'
 import Subscribe from './Subscribe/subscribe'
 import Testimonial from './Testimonial/Testimonials'
 import Popup from './assets/popup/popup'
+import Footer from '../src/Footer/footer'
 
 import './App.css'
 
@@ -39,6 +40,8 @@ const [orderPopup, setOrderPopup] = React.useState(false);
       <Banneres/>
       <Subscribe/>
       <Testimonial/>
+      <Footer/>
+
       <Popup orderPopup={orderPopup} setOrderPopup={setOrderPopup} />
 
       
