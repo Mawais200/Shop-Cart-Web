@@ -45,7 +45,7 @@ const Hero = ({ handleOrderPopup }) => {
   ];
 
   return (
-    <div className="relative overflow-hidden popin min-h-[500px] sm:min-h-[650px]  bg-gray-100 flex justify-center items-center pt-[50px] md:pt-0 dark:bg-gray-950 dark:text-white duration-200">
+    <div className="relative overflow-hidden popin min-h-[520px] sm:min-h-[660px]  bg-gray-100 flex justify-center items-center pt-[50px] md:pt-0 dark:bg-gray-950 dark:text-white duration-200">
       {/* Background Pattern */}
       <div className="h-[400px] w-[600px] sm:h-[700px] sm:w-[700px] bg-primary/40 absolute -top-1/3 right-0 rounded-3xl rotate-45 -z-10"></div>
 
